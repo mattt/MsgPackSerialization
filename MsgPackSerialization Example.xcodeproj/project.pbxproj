@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8B63FB317BA8B8C00E869F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B63FB217BA8B8C00E869F6 /* Foundation.framework */; };
+		F8B63FB617BA8B8C00E869F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B63FB517BA8B8C00E869F6 /* main.m */; };
+		F8B63FC417BA8C0F00E869F6 /* MsgPackSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B63FC317BA8C0F00E869F6 /* MsgPackSerialization.m */; };
+		F8B6400E17BA8F9800E869F6 /* objectc.c in Sources */ = {isa = PBXBuildFile; fileRef = F8B6400917BA8F9800E869F6 /* objectc.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		F8B6400F17BA8F9800E869F6 /* unpack.c in Sources */ = {isa = PBXBuildFile; fileRef = F8B6400A17BA8F9800E869F6 /* unpack.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		F8B6401017BA8F9800E869F6 /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = F8B6400B17BA8F9800E869F6 /* version.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		F8B6401117BA8F9800E869F6 /* vrefbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = F8B6400C17BA8F9800E869F6 /* vrefbuffer.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		F8B6401217BA8F9800E869F6 /* zone.c in Sources */ = {isa = PBXBuildFile; fileRef = F8B6400D17BA8F9800E869F6 /* zone.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F8B63FAD17BA8B8C00E869F6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F8B63FAF17BA8B8C00E869F6 /* MsgPackSerialization Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "MsgPackSerialization Example"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B63FB217BA8B8C00E869F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F8B63FB517BA8B8C00E869F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F8B63FB817BA8B8C00E869F6 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		F8B63FC217BA8C0F00E869F6 /* MsgPackSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgPackSerialization.h; path = MsgPackSerialization/MsgPackSerialization.h; sourceTree = "<group>"; };
+		F8B63FC317BA8C0F00E869F6 /* MsgPackSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgPackSerialization.m; path = MsgPackSerialization/MsgPackSerialization.m; sourceTree = "<group>"; };
+		F8B63FFB17BA8F9800E869F6 /* object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = object.h; sourceTree = "<group>"; };
+		F8B63FFC17BA8F9800E869F6 /* pack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pack.h; sourceTree = "<group>"; };
+		F8B63FFD17BA8F9800E869F6 /* pack_define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pack_define.h; sourceTree = "<group>"; };
+		F8B63FFE17BA8F9800E869F6 /* pack_template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pack_template.h; sourceTree = "<group>"; };
+		F8B63FFF17BA8F9800E869F6 /* sbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sbuffer.h; sourceTree = "<group>"; };
+		F8B6400017BA8F9800E869F6 /* sysdep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sysdep.h; sourceTree = "<group>"; };
+		F8B6400117BA8F9800E869F6 /* unpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unpack.h; sourceTree = "<group>"; };
+		F8B6400217BA8F9800E869F6 /* unpack_define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unpack_define.h; sourceTree = "<group>"; };
+		F8B6400317BA8F9800E869F6 /* unpack_template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unpack_template.h; sourceTree = "<group>"; };
+		F8B6400417BA8F9800E869F6 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		F8B6400517BA8F9800E869F6 /* vrefbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vrefbuffer.h; sourceTree = "<group>"; };
+		F8B6400617BA8F9800E869F6 /* zbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbuffer.h; sourceTree = "<group>"; };
+		F8B6400717BA8F9800E869F6 /* zone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zone.h; sourceTree = "<group>"; };
+		F8B6400817BA8F9800E869F6 /* msgpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msgpack.h; sourceTree = "<group>"; };
+		F8B6400917BA8F9800E869F6 /* objectc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objectc.c; sourceTree = "<group>"; };
+		F8B6400A17BA8F9800E869F6 /* unpack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unpack.c; sourceTree = "<group>"; };
+		F8B6400B17BA8F9800E869F6 /* version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = version.c; sourceTree = "<group>"; };
+		F8B6400C17BA8F9800E869F6 /* vrefbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vrefbuffer.c; sourceTree = "<group>"; };
+		F8B6400D17BA8F9800E869F6 /* zone.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zone.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8B63FAC17BA8B8C00E869F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B63FB317BA8B8C00E869F6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8B63FA617BA8B8C00E869F6 = {
+			isa = PBXGroup;
+			children = (
+				F8B63FB417BA8B8C00E869F6 /* MsgPackSerialization Example */,
+				F8B63FB117BA8B8C00E869F6 /* Frameworks */,
+				F8B63FB017BA8B8C00E869F6 /* Products */,
+				F8B63FC017BA8BEA00E869F6 /* Vendor */,
+			);
+			sourceTree = "<group>";
+		};
+		F8B63FB017BA8B8C00E869F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8B63FAF17BA8B8C00E869F6 /* MsgPackSerialization Example */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8B63FB117BA8B8C00E869F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8B63FB217BA8B8C00E869F6 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8B63FB417BA8B8C00E869F6 /* MsgPackSerialization Example */ = {
+			isa = PBXGroup;
+			children = (
+				F8B63FB517BA8B8C00E869F6 /* main.m */,
+				F8B63FB717BA8B8C00E869F6 /* Supporting Files */,
+			);
+			name = "MsgPackSerialization Example";
+			path = Example;
+			sourceTree = "<group>";
+		};
+		F8B63FB717BA8B8C00E869F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8B63FB817BA8B8C00E869F6 /* Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8B63FC017BA8BEA00E869F6 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F8B63FC117BA8BEF00E869F6 /* MsgPackSerialization */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		F8B63FC117BA8BEF00E869F6 /* MsgPackSerialization */ = {
+			isa = PBXGroup;
+			children = (
+				F8B63FC217BA8C0F00E869F6 /* MsgPackSerialization.h */,
+				F8B63FC317BA8C0F00E869F6 /* MsgPackSerialization.m */,
+				F8B63FF917BA8F9800E869F6 /* msgpack_src */,
+			);
+			name = MsgPackSerialization;
+			sourceTree = "<group>";
+		};
+		F8B63FF917BA8F9800E869F6 /* msgpack_src */ = {
+			isa = PBXGroup;
+			children = (
+				F8B63FFA17BA8F9800E869F6 /* msgpack */,
+				F8B6400817BA8F9800E869F6 /* msgpack.h */,
+				F8B6400917BA8F9800E869F6 /* objectc.c */,
+				F8B6400A17BA8F9800E869F6 /* unpack.c */,
+				F8B6400B17BA8F9800E869F6 /* version.c */,
+				F8B6400C17BA8F9800E869F6 /* vrefbuffer.c */,
+				F8B6400D17BA8F9800E869F6 /* zone.c */,
+			);
+			name = msgpack_src;
+			path = MsgPackSerialization/msgpack_src;
+			sourceTree = "<group>";
+		};
+		F8B63FFA17BA8F9800E869F6 /* msgpack */ = {
+			isa = PBXGroup;
+			children = (
+				F8B63FFB17BA8F9800E869F6 /* object.h */,
+				F8B63FFC17BA8F9800E869F6 /* pack.h */,
+				F8B63FFD17BA8F9800E869F6 /* pack_define.h */,
+				F8B63FFE17BA8F9800E869F6 /* pack_template.h */,
+				F8B63FFF17BA8F9800E869F6 /* sbuffer.h */,
+				F8B6400017BA8F9800E869F6 /* sysdep.h */,
+				F8B6400117BA8F9800E869F6 /* unpack.h */,
+				F8B6400217BA8F9800E869F6 /* unpack_define.h */,
+				F8B6400317BA8F9800E869F6 /* unpack_template.h */,
+				F8B6400417BA8F9800E869F6 /* version.h */,
+				F8B6400517BA8F9800E869F6 /* vrefbuffer.h */,
+				F8B6400617BA8F9800E869F6 /* zbuffer.h */,
+				F8B6400717BA8F9800E869F6 /* zone.h */,
+			);
+			path = msgpack;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8B63FAE17BA8B8C00E869F6 /* MsgPackSerialization Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8B63FBD17BA8B8C00E869F6 /* Build configuration list for PBXNativeTarget "MsgPackSerialization Example" */;
+			buildPhases = (
+				F8B63FAB17BA8B8C00E869F6 /* Sources */,
+				F8B63FAC17BA8B8C00E869F6 /* Frameworks */,
+				F8B63FAD17BA8B8C00E869F6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MsgPackSerialization Example";
+			productName = "MsgPackSerialization Example";
+			productReference = F8B63FAF17BA8B8C00E869F6 /* MsgPackSerialization Example */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8B63FA717BA8B8C00E869F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Mattt Thompson";
+			};
+			buildConfigurationList = F8B63FAA17BA8B8C00E869F6 /* Build configuration list for PBXProject "MsgPackSerialization Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F8B63FA617BA8B8C00E869F6;
+			productRefGroup = F8B63FB017BA8B8C00E869F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8B63FAE17BA8B8C00E869F6 /* MsgPackSerialization Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8B63FAB17BA8B8C00E869F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B63FB617BA8B8C00E869F6 /* main.m in Sources */,
+				F8B63FC417BA8C0F00E869F6 /* MsgPackSerialization.m in Sources */,
+				F8B6401017BA8F9800E869F6 /* version.c in Sources */,
+				F8B6401217BA8F9800E869F6 /* zone.c in Sources */,
+				F8B6400E17BA8F9800E869F6 /* objectc.c in Sources */,
+				F8B6401117BA8F9800E869F6 /* vrefbuffer.c in Sources */,
+				F8B6400F17BA8F9800E869F6 /* unpack.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F8B63FBB17BA8B8C00E869F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F8B63FBC17BA8B8C00E869F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F8B63FBE17BA8B8C00E869F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Example/Prefix.pch;
+				HEADER_SEARCH_PATHS = "msgpack-c/**";
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		F8B63FBF17BA8B8C00E869F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Example/Prefix.pch;
+				HEADER_SEARCH_PATHS = "msgpack-c/**";
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8B63FAA17BA8B8C00E869F6 /* Build configuration list for PBXProject "MsgPackSerialization Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B63FBB17BA8B8C00E869F6 /* Debug */,
+				F8B63FBC17BA8B8C00E869F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8B63FBD17BA8B8C00E869F6 /* Build configuration list for PBXNativeTarget "MsgPackSerialization Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B63FBE17BA8B8C00E869F6 /* Debug */,
+				F8B63FBF17BA8B8C00E869F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8B63FA717BA8B8C00E869F6 /* Project object */;
+}
