@@ -44,36 +44,32 @@ static void MsgPackEncode(id obj, MsgPackWritingOptions opt, msgpack_packer *pk,
 		msgpack_pack_raw(pk, len);
 		msgpack_pack_raw_body(pk, str, len);
 	} else if ([obj isKindOfClass:[NSNumber class]]) {
-		CFNumberType type = CFNumberGetType((CFNumberRef)obj);
-        switch (type)	{
-            case kCFNumberSInt8Type:
-                msgpack_pack_int8(pk, [(NSNumber *)obj shortValue]);
-                break;
-            case kCFNumberSInt16Type:
-            case kCFNumberShortType:
+        switch (*[obj objCType]) {
+            case 's':
                 msgpack_pack_int16(pk, [(NSNumber *)obj shortValue]);
                 break;
-            case kCFNumberSInt32Type:
-            case kCFNumberIntType:
-            case kCFNumberLongType:
-            case kCFNumberCFIndexType:
-            case kCFNumberNSIntegerType:
+            case 'S':
+                msgpack_pack_int16(pk, [(NSNumber *)obj unsignedShortValue]);
+                break;
+            case 'i':
+            case 'l':
                 msgpack_pack_int32(pk, [(NSNumber *)obj intValue]);
                 break;
-            case kCFNumberSInt64Type:
-            case kCFNumberLongLongType:
+            case 'I':
+            case 'L':
+                msgpack_pack_int32(pk, [(NSNumber *)obj unsignedIntValue]);
+                break;
+            case 'q':
                 msgpack_pack_int64(pk, [(NSNumber *)obj longLongValue]);
                 break;
-            case kCFNumberFloat32Type:
-            case kCFNumberFloatType:
-            case kCFNumberCGFloatType:
+            case 'f':
                 msgpack_pack_float(pk, [(NSNumber *)obj floatValue]);
                 break;
-            case kCFNumberFloat64Type:
-            case kCFNumberDoubleType:
+            case 'd':
                 msgpack_pack_double(pk, [(NSNumber *)obj doubleValue]);
                 break;
-            case kCFNumberCharType: {
+            case 'c':
+            case 'C': {
                 switch ([(NSNumber *)obj intValue]) {
                     case 0:
                         msgpack_pack_false(pk);
@@ -82,13 +78,14 @@ static void MsgPackEncode(id obj, MsgPackWritingOptions opt, msgpack_packer *pk,
                         msgpack_pack_true(pk);
                         break;
                     default:
-                        msgpack_pack_int16(pk, [(NSNumber *)obj intValue]);
+                        msgpack_pack_int8(pk, [(NSNumber *)obj charValue]);
                         break;
                 }
             }
                 break;
-            default:
+            default: {
                 goto _error;
+            }
         }
 	} else if ([obj isEqual:[NSNull null]]) {
 		msgpack_pack_nil(pk);
