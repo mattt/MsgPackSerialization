@@ -1,5 +1,5 @@
 // MsgPackSerialization.m
-// 
+//
 // Copyright (c) 2013 Mattt Thompson (http://mattt.me)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -8,10 +8,10 @@
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -94,12 +94,12 @@ static void MsgPackEncode(id obj, MsgPackWritingOptions opt, msgpack_packer *pk,
 	}
 
 _error:
-    
+
     if (error) {
         NSDictionary *userInfo = @{
                                    NSLocalizedDescriptionKey: [NSString stringWithFormat:NSLocalizedStringFromTable(@"Could Not Encode Object: %@", @"MsgPackSerialization", nil), obj]
                                    };
-        
+
         *error = [[NSError alloc] initWithDomain:MsgPackErrorDomain code:0 userInfo:userInfo];
     }
 }
@@ -124,7 +124,7 @@ static id MsgPackDecode(msgpack_object obj, MsgPackReadingOptions opt, __unused 
             for (msgpack_object *p = obj.via.array.ptr; p < arr; p++) {
                 [mutableArray addObject:MsgPackDecode(*p, opt, error)];
             }
-            
+
             return (opt & MsgPackReadingMutableContainers) ? mutableArray : [NSArray arrayWithArray:mutableArray];
         }
         case MSGPACK_OBJECT_MAP: {
@@ -138,7 +138,7 @@ static id MsgPackDecode(msgpack_object obj, MsgPackReadingOptions opt, __unused 
                     mutableDictionary[key] = value;
                 }
             }
-            
+
             return (opt & MsgPackReadingMutableContainers) ? mutableDictionary : [NSDictionary dictionaryWithDictionary:mutableDictionary];
         }
         case MSGPACK_OBJECT_NIL:
@@ -158,14 +158,14 @@ static id MsgPackDecode(msgpack_object obj, MsgPackReadingOptions opt, __unused 
     }
 
     id obj = nil;
-    
+
     msgpack_unpacked msg;
 	msgpack_unpacked_init(&msg);
     if (msgpack_unpack_next(&msg, data.bytes, data.length, NULL)) {
         obj = MsgPackDecode(msg.data, opt, error);
     }
 	msgpack_unpacked_destroy(&msg);
-    
+
     return obj;
 }
 
