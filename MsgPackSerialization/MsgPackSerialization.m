@@ -115,8 +115,18 @@ static id MsgPackDecode(msgpack_object obj, MsgPackReadingOptions opt, __unused 
         case MSGPACK_OBJECT_DOUBLE:
             return @(obj.via.dec);
         case MSGPACK_OBJECT_RAW: {
-            NSMutableString *mutableString = [[NSMutableString alloc] initWithBytes:obj.via.raw.ptr length:obj.via.raw.size encoding:NSUTF8StringEncoding];
-            return (opt & MsgPackReadingMutableLeaves) ? mutableString : [NSString stringWithString:mutableString];
+            
+            NSMutableString * mutableString = [[NSMutableString alloc] initWithBytes:obj.via.raw.ptr length:obj.via.raw.size encoding:NSUTF8StringEncoding];
+            if(!mutableString)
+            {
+                NSMutableData * mutableData =  [[NSMutableData alloc] initWithBytes:obj.via.raw.ptr length:obj.via.raw.size];
+                return (opt & MsgPackReadingMutableLeaves) ? mutableData : [NSData dataWithData:mutableData];
+            }
+            else
+            {
+               return (opt & MsgPackReadingMutableLeaves) ? mutableString : [NSString stringWithString:mutableString];
+            }
+            
         }
         case MSGPACK_OBJECT_ARRAY: {
             NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:obj.via.array.size];
@@ -133,7 +143,12 @@ static id MsgPackDecode(msgpack_object obj, MsgPackReadingOptions opt, __unused 
             for (msgpack_object_kv *p = obj.via.map.ptr; p < kv; p++) {
                 id key = MsgPackDecode(p->key, opt, error);
                 id value = MsgPackDecode(p->val, opt, error);
-
+                
+                if ([key isKindOfClass:[NSData class]])
+                {
+                    key = [[NSString alloc] initWithData:key encoding:NSUTF8StringEncoding];
+                }
+                
                 if ((key && ![key isEqual:[NSNull null]])) {
                     mutableDictionary[key] = value;
                 }
