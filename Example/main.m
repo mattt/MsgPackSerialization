@@ -24,22 +24,24 @@
 
 #import "MsgPackSerialization.h"
 
+extern uint64_t dispatch_benchmark(size_t count, void (^block)(void));
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         id obj = @{
                    @"foo": @(42.0),
                    @"bar": @"lorem ipsum",
-                   @"baz": @[@1, @2, @3, @4]
+                   @"baz": @[@1, @2, @3, @4],
+                   @"qux": [@"Hello, World" dataUsingEncoding:NSUTF8StringEncoding],
                    };
 
-        NSError *error = nil;
+        uint64_t t = dispatch_benchmark(1000, ^{
+            NSError *error = nil;
+            NSData *data = [MsgPackSerialization dataWithMsgPackObject:obj options:0 error:&error];
+            [MsgPackSerialization MsgPackObjectWithData:data options:0 error:&error];
+        });
 
-        CFAbsoluteTime t_0 = CFAbsoluteTimeGetCurrent();
-        NSData *data = [MsgPackSerialization dataWithMsgPackObject:obj options:0 error:&error];
-        NSLog(@"Packed: %@ (Elapsed: %g)", data, CFAbsoluteTimeGetCurrent() - t_0);
-
-        CFAbsoluteTime t_1 = CFAbsoluteTimeGetCurrent();
-        NSLog(@"Unpacked: %@ (Elapsed: %g)", [MsgPackSerialization MsgPackObjectWithData:data options:0 error:&error], CFAbsoluteTimeGetCurrent() - t_1);
+        NSLog(@"Average Runtime: %llu ns", t);
     }
     
     return 0;
