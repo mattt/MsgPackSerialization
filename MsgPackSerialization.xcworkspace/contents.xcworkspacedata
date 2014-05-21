@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:MsgPackSerialization"
+      name = "MsgPackSerialization">
+      <Group
+         location = "group:msgpack_src"
+         name = "msgpack_src">
+         <Group
+            location = "group:msgpack"
+            name = "msgpack">
+            <FileRef
+               location = "group:object.h">
+            </FileRef>
+            <FileRef
+               location = "group:pack.h">
+            </FileRef>
+            <FileRef
+               location = "group:pack_define.h">
+            </FileRef>
+            <FileRef
+               location = "group:pack_template.h">
+            </FileRef>
+            <FileRef
+               location = "group:sbuffer.h">
+            </FileRef>
+            <FileRef
+               location = "group:sysdep.h">
+            </FileRef>
+            <FileRef
+               location = "group:unpack.h">
+            </FileRef>
+            <FileRef
+               location = "group:unpack_define.h">
+            </FileRef>
+            <FileRef
+               location = "group:unpack_template.h">
+            </FileRef>
+            <FileRef
+               location = "group:version.h">
+            </FileRef>
+            <FileRef
+               location = "group:vrefbuffer.h">
+            </FileRef>
+            <FileRef
+               location = "group:zbuffer.h">
+            </FileRef>
+            <FileRef
+               location = "group:zone.h">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:msgpack.h">
+         </FileRef>
+         <FileRef
+            location = "group:objectc.c">
+         </FileRef>
+         <FileRef
+            location = "group:unpack.c">
+         </FileRef>
+         <FileRef
+            location = "group:version.c">
+         </FileRef>
+         <FileRef
+            location = "group:vrefbuffer.c">
+         </FileRef>
+         <FileRef
+            location = "group:zone.c">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:MsgPackSerialization.h">
+      </FileRef>
+      <FileRef
+         location = "group:MsgPackSerialization.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:MsgPackSerialization Example.xcodeproj">
+   </FileRef>
+</Workspace>
