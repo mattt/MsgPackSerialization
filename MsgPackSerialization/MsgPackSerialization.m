@@ -116,7 +116,12 @@ static id MsgPackDecode(msgpack_object obj, MsgPackReadingOptions opt, __unused 
             return @(obj.via.dec);
         case MSGPACK_OBJECT_RAW: {
             NSMutableString *mutableString = [[NSMutableString alloc] initWithBytes:obj.via.raw.ptr length:obj.via.raw.size encoding:NSUTF8StringEncoding];
-            return (opt & MsgPackReadingMutableLeaves) ? mutableString : [NSString stringWithString:mutableString];
+            if (mutableString) {
+                return (opt & MsgPackReadingMutableLeaves) ? mutableString : [NSString stringWithString:mutableString];
+            } else {
+                NSMutableData *mutableData =  [[NSMutableData alloc] initWithBytes:obj.via.raw.ptr length:obj.via.raw.size];
+                return (opt & MsgPackReadingMutableLeaves) ? mutableData : [NSData dataWithData:mutableData];
+            }
         }
         case MSGPACK_OBJECT_ARRAY: {
             NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:obj.via.array.size];
