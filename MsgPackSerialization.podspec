@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
   s.source   = { :git => 'https://github.com/mattt/MsgPackSerialization.git', :tag => '0.0.2' }
   s.source_files = 'MsgPackSerialization', 'MsgPackSerialization/msgpack_src/*.{c,h}', 'MsgPackSerialization/msgpack_src/msgpack/*.h'
   s.requires_arc = true
+  s.public_header_files = 'MsgPackSerialization/MsgPackSerialization.h'
 
   s.ios.deployment_target = '5.0'
   s.osx.deployment_target = '10.7'
