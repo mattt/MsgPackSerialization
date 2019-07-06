@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'MsgPackSerialization'
-  s.version  = '0.0.2'
+  s.version  = '1.0.0'
   s.license  = 'MIT'
   s.summary  = 'Encodes and decodes between Objective-C objects and MsgPack.'
   s.homepage = 'https://github.com/mattt/MsgPackSerialization'
