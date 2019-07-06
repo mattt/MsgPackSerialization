@@ -1,7 +1,8 @@
-MsgPackSerialization
-====================
+# MsgPackSerialization
 
-`MsgPackSerialization` encodes and decodes between Objective-C objects and [MsgPack](http://msgpack.org) data, following the API conventions of Foundation's `NSJSONSerialization` class.
+`MsgPackSerialization` encodes and decodes between Objective-C objects and
+[MsgPack](http://msgpack.org) data,
+following the API conventions of Foundation's `NSJSONSerialization` class.
 
 ## Usage
 
@@ -10,7 +11,7 @@ id obj = @{
            @"foo": @(42.0),
            @"bar": @"lorem ipsum",
            @"baz": @[@1, @2, @3, @4]
-           };
+          };
 
 NSError *error = nil;
 
@@ -26,12 +27,9 @@ NSLog(@"Unpacked: %@ (Elapsed: %g)", [MsgPackSerialization MsgPackObjectWithData
 
 ## Contact
 
-Mattt Thompson
-
-- http://github.com/mattt
-- http://twitter.com/mattt
-- m@mattt.me
+[Mattt](https://twitter.com/mattt)
 
 ## License
 
-MsgPackSerialization is available under the MIT license. See the LICENSE file for more info.
+MsgPackSerialization is available under the MIT license.
+See the LICENSE file for more info.
