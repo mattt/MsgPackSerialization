@@ -1,5 +1,9 @@
 # MsgPackSerialization
 
+> This project is no longer maintained.
+> See [@Flight-School/MessagePack](https://github.com/Flight-School/MessagePack)
+> for a Swift Codable implementation of the MessagePack format.
+
 `MsgPackSerialization` encodes and decodes between Objective-C objects and
 [MsgPack](http://msgpack.org) data,
 following the API conventions of Foundation's `NSJSONSerialization` class.
