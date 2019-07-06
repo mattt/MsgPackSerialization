@@ -1,6 +1,6 @@
 // main.m
 //
-// Copyright (c) 2013 Mattt Thompson (http://mattt.me)
+// Copyright (c) 2013 – 2019 Mattt (https://mat.tt)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -43,7 +43,7 @@ int main(int argc, const char * argv[]) {
 
         NSLog(@"Average Runtime: %llu ns", t);
     }
-    
+
     return 0;
 }
 
